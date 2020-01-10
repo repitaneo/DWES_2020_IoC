@@ -19,6 +19,8 @@ public class AutorBean {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "AutorBean [nombre=" + nombre + ", edad=" + edad + "]";
