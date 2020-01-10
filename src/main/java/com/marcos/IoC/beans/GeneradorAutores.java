@@ -2,6 +2,7 @@ package com.marcos.IoC.beans;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 import com.marcos.IoC.beans.Autor.AutorBean;
 
@@ -10,6 +11,7 @@ public class GeneradorAutores {
 
 	
 	@Bean
+	@Scope("prototype")
 	public AutorBean juan() {
 		
 		AutorBean autor = new AutorBean();

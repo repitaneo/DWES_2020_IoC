@@ -23,7 +23,7 @@ public class AutorBean {
 	
 	@Override
 	public String toString() {
-		return "AutorBean [nombre=" + nombre + ", edad=" + edad + "]";
+		return this.hashCode()+" [" + nombre + ", " + edad + "]";
 	}
 	
 	
