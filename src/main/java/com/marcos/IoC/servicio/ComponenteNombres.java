@@ -6,6 +6,11 @@ import org.springframework.stereotype.Service;
 public class ComponenteNombres {
 
 	
+	private int numeroNombres = 20;
+	
+	
+	
+	
 	
 	
 	public String[] getNombres() {
