@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.marcos.IoC.beans.Autor.AutorBean;
+import com.marcos.IoC.servicio.ComponenteNombres;
 
 @Controller
 public class Rutas {
@@ -23,12 +24,21 @@ public class Rutas {
 	AutorBean pedro;	
 	
 	
+	@Autowired
+	ComponenteNombres componenteNombres;
+	
+	
+	
 	@GetMapping("/")
 	@ResponseBody
 	public String rutaInicial() {
 	
-		pedro.setEdad(99);
+		String salida = "";
+		for(String str:componenteNombres.getNombres()) {
+			
+			salida += str+"<br>";
+		}
 		
-		return juan+"<br>"+maria+"<br>"+pedro;
+		return salida;
 	}
 }
